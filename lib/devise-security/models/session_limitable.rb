@@ -31,7 +31,7 @@ module Devise
       # @return [Boolean]
       # @return [false] by default. This can be overridden by application logic as necessary.
       def skip_session_limitable?
-        false
+        true
       end
     end
   end
