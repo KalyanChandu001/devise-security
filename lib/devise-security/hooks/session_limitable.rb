@@ -34,6 +34,7 @@ Warden::Manager.after_set_user only: :fetch do |record, warden, options|
       end
       warden.raw_session.clear
       warden.logout(scope)
+      flash[:notice] = "Already logged in"
       throw :warden, scope: scope, message: :session_limited
     end
   end
